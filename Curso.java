@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -18,4 +18,12 @@ public class Curso {
 
     @ManyToMany(mappedBy = "cursos")
     private Set<Aluno> alunos = new HashSet<>();
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 }
