@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -23,4 +23,12 @@ public class Aluno {
         inverseJoinColumns = @JoinColumn(name = "curso_id")
     )
     private Set<Curso> cursos = new HashSet<>();
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 }
